@@ -37,7 +37,7 @@ const cards = [
 
 export default function ExperienceSection() {
   return (
-    <section id="experiencia" className="relative py-32 px-6" style={{ background: "#FFFFFF" }}>
+    <section id="experiencia" className="relative py-20 md:py-32 px-6" style={{ background: "#FFFFFF" }}>
       <div className="max-w-6xl mx-auto">
         {/* Top label */}
         <AnimateOnScroll>
@@ -73,7 +73,7 @@ export default function ExperienceSection() {
           {cards.map((card, i) => (
             <AnimateOnScroll key={card.title} delay={i * 100}>
               <div
-                className="group flex flex-col p-10 cursor-default transition-all duration-400"
+                className="group flex flex-col p-6 md:p-10 cursor-default transition-all duration-400"
                 style={{
                   background: "#FAF8F5",
                   border: "1px solid rgba(168,118,62,0.12)",
@@ -128,7 +128,7 @@ export default function ExperienceSection() {
         {/* Divider + second copy block */}
         <AnimateOnScroll delay={100}>
           <div
-            className="w-full h-px my-24"
+            className="w-full h-px my-12 md:my-24"
             style={{ background: "linear-gradient(90deg, transparent, rgba(168,118,62,0.2), transparent)" }}
             aria-hidden="true"
           />

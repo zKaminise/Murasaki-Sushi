@@ -5,7 +5,7 @@ export default function MenuDegustacaoSection() {
   return (
     <section
       id="menu"
-      className="relative py-32 px-6 overflow-hidden"
+      className="relative py-20 md:py-32 px-6 overflow-hidden"
       style={{ background: "#F2EDE6" }}
     >
       {/* Purple hint accent top-right */}
@@ -15,7 +15,7 @@ export default function MenuDegustacaoSection() {
         aria-hidden="true"
       />
 
-      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-28 items-center">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-28 items-center">
         {/* Left: visual blocks */}
         <AnimateOnScroll>
           <div className="relative">
@@ -33,7 +33,7 @@ export default function MenuDegustacaoSection() {
               {["Segunda", "Terça", "Quarta"].map((day) => (
                 <div
                   key={day}
-                  className="flex flex-col items-center justify-center py-8 px-3"
+                  className="flex flex-col items-center justify-center py-5 md:py-8 px-3"
                   style={{ background: "#FFFFFF", border: "1px solid rgba(168,118,62,0.15)" }}
                 >
                   <span className="font-heading mb-1" style={{ fontSize: "1.15rem", fontWeight: 500, color: "#1A1410" }}>
@@ -48,7 +48,7 @@ export default function MenuDegustacaoSection() {
 
             {/* Quote */}
             <div
-              className="relative z-10 p-8"
+              className="relative z-10 p-5 md:p-8"
               style={{ background: "#FFFFFF", border: "1px solid rgba(168,118,62,0.15)", borderLeft: "3px solid #A8763E" }}
             >
               <p

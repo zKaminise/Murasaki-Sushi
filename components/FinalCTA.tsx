@@ -5,7 +5,7 @@ export default function FinalCTA() {
   return (
     <section
       id="contato"
-      className="relative py-40 px-6 overflow-hidden"
+      className="relative py-24 md:py-40 px-6 overflow-hidden"
       style={{ background: "#1A1410" }}
       aria-labelledby="cta-heading"
     >

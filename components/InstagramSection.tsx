@@ -17,7 +17,7 @@ const posts = [
 export default function InstagramSection() {
   return (
     <section
-      className="relative py-32 px-6"
+      className="relative py-20 md:py-32 px-6"
       style={{ background: "#FFFFFF" }}
       aria-labelledby="instagram-heading"
     >
@@ -54,7 +54,7 @@ export default function InstagramSection() {
         </AnimateOnScroll>
 
         <AnimateOnScroll delay={80}>
-          <div className="grid grid-cols-3 gap-1.5">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-1 sm:gap-1.5">
             {posts.map((post, i) => (
               <a
                 key={i}

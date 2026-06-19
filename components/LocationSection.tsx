@@ -5,11 +5,11 @@ export default function LocationSection() {
   return (
     <section
       id="localizacao"
-      className="relative py-32 px-6"
+      className="relative py-20 md:py-32 px-6"
       style={{ background: "#FAF8F5" }}
       aria-labelledby="location-heading"
     >
-      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
         {/* Left */}
         <AnimateOnScroll>
           <div>
@@ -98,7 +98,7 @@ export default function LocationSection() {
               title="Murasaki Sushi no Google Maps"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.8!2d-48.2794!3d-18.9192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94a445b2a5555555%3A0x0!2sRua%20Tiradentes%2C%20216%20-%20Fundinho%2C%20Uberl%C3%A2ndia%20-%20MG%2C%2038400-200!5e0!3m2!1spt-BR!2sbr!4v1000000000000!5m2!1spt-BR!2sbr"
               width="100%"
-              height="420"
+              height="320"
               style={{ border: 0, display: "block" }}
               allowFullScreen
               loading="lazy"

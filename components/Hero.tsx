@@ -6,11 +6,11 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center overflow-hidden"
+      className="relative overflow-hidden lg:min-h-screen lg:flex lg:items-center"
       style={{ background: "#FAF8F5" }}
     >
       {/* Left — content */}
-      <div className="relative z-10 flex flex-col justify-center px-8 md:px-16 lg:px-24 pt-28 pb-16 w-full lg:w-1/2">
+      <div className="relative z-10 flex flex-col justify-center px-6 md:px-12 lg:px-20 xl:px-24 pt-28 pb-8 lg:pb-20 w-full lg:w-1/2">
         {/* Logo */}
         <div className="animate-float mb-10">
           <MurasakiLogo size="lg" variant="dark" />
@@ -106,12 +106,18 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Right — hero image */}
-      <div className="hidden lg:block absolute right-0 top-0 h-full w-[52%]">
-        {/* Gradient fade on left edge */}
+      {/* Image — stacks below on mobile, absolute right panel on desktop */}
+      <div className="relative h-72 sm:h-80 lg:absolute lg:right-0 lg:top-0 lg:h-full lg:w-[52%] overflow-hidden">
+        {/* Gradient fade on left edge (desktop only) */}
         <div
-          className="absolute left-0 top-0 h-full w-32 z-10"
+          className="hidden lg:block absolute left-0 top-0 h-full w-32 z-10"
           style={{ background: "linear-gradient(to right, #FAF8F5, transparent)" }}
+          aria-hidden="true"
+        />
+        {/* Gradient fade on top edge (mobile only) */}
+        <div
+          className="lg:hidden absolute top-0 left-0 right-0 h-12 z-10"
+          style={{ background: "linear-gradient(to bottom, #FAF8F5, transparent)" }}
           aria-hidden="true"
         />
 
@@ -121,19 +127,19 @@ export default function Hero() {
           fill
           className="object-cover object-center"
           priority
-          sizes="52vw"
+          sizes="(max-width: 1024px) 100vw, 52vw"
         />
 
-        {/* Subtle dark gradient at bottom */}
+        {/* Bottom gradient */}
         <div
-          className="absolute bottom-0 left-0 right-0 h-40"
-          style={{ background: "linear-gradient(to top, rgba(250,248,245,0.6), transparent)" }}
+          className="absolute bottom-0 left-0 right-0 h-24 lg:h-40"
+          style={{ background: "linear-gradient(to top, rgba(250,248,245,0.7), transparent)" }}
           aria-hidden="true"
         />
 
-        {/* Floating label */}
+        {/* Floating label (desktop only) */}
         <div
-          className="absolute bottom-12 right-10 z-20 text-right"
+          className="hidden lg:block absolute bottom-12 right-10 z-20 text-right"
           style={{ background: "rgba(250,248,245,0.88)", backdropFilter: "blur(10px)", padding: "12px 18px", border: "1px solid rgba(168,118,62,0.18)" }}
         >
           <p className="font-body" style={{ fontSize: "0.6rem", color: "#A8763E", letterSpacing: "0.2em", textTransform: "uppercase", marginBottom: "2px" }}>
@@ -143,23 +149,6 @@ export default function Hero() {
             Uramaki Japonês
           </p>
         </div>
-      </div>
-
-      {/* Mobile: show image below fold */}
-      <div className="block lg:hidden absolute bottom-0 left-0 right-0 h-48 overflow-hidden">
-        <div
-          className="absolute top-0 left-0 right-0 h-16 z-10"
-          style={{ background: "linear-gradient(to bottom, #FAF8F5, transparent)" }}
-          aria-hidden="true"
-        />
-        <Image
-          src="/images/img6.png"
-          alt="Prato do Murasaki Sushi"
-          fill
-          className="object-cover object-top"
-          priority
-          sizes="100vw"
-        />
       </div>
     </section>
   );

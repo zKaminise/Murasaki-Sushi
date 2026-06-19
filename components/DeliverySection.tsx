@@ -5,11 +5,11 @@ export default function DeliverySection() {
   return (
     <section
       id="delivery"
-      className="relative py-32 px-6 overflow-hidden"
+      className="relative py-20 md:py-32 px-6 overflow-hidden"
       style={{ background: "#F2EDE6" }}
       aria-labelledby="delivery-heading"
     >
-      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
         {/* Left */}
         <AnimateOnScroll>
           <div>
@@ -39,7 +39,7 @@ export default function DeliverySection() {
                 href="https://wa.me/5534997797979?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20pedido%20no%20Murasaki%20Sushi."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 px-7 py-4 font-body text-sm tracking-widest uppercase cursor-pointer transition-all duration-300"
+                className="flex items-center justify-center gap-3 px-7 py-4 font-body text-sm tracking-widest uppercase cursor-pointer transition-all duration-300 w-full sm:w-auto"
                 style={{ background: "#A8763E", color: "#FAF8F5", letterSpacing: "0.14em", fontWeight: 500 }}
                 onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = "#C49A52")}
                 onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = "#A8763E")}
@@ -51,7 +51,7 @@ export default function DeliverySection() {
                 href="https://wa.me/5534997797979?text=Ol%C3%A1%2C%20gostaria%20de%20ver%20as%20op%C3%A7%C3%B5es%20de%20delivery%20do%20Murasaki%20Sushi."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 px-7 py-4 font-body text-sm tracking-widest uppercase cursor-pointer transition-all duration-300"
+                className="flex items-center justify-center gap-3 px-7 py-4 font-body text-sm tracking-widest uppercase cursor-pointer transition-all duration-300 w-full sm:w-auto"
                 style={{ border: "1px solid rgba(168,118,62,0.35)", color: "rgba(26,20,16,0.6)", letterSpacing: "0.14em" }}
                 onMouseEnter={(e) => {
                   const el = e.currentTarget as HTMLAnchorElement;

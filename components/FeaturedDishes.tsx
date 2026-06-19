@@ -57,7 +57,7 @@ export default function FeaturedDishes() {
   return (
     <section
       id="pratos"
-      className="relative py-32 px-6"
+      className="relative py-20 md:py-32 px-6"
       style={{ background: "#FAF8F5" }}
       aria-labelledby="dishes-heading"
     >
